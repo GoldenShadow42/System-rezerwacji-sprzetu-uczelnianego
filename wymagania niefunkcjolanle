@@ -1,0 +1,67 @@
+2. Wymagania niefunkcjonalne
+
+2.1. Użyteczność (UX/UI)
+
+1. Interfejs musi być dostępny w przeglądarce internetowej, responsywny (desktop, tablet, telefon).
+
+2. System powinien być intuicyjny dla użytkownika bez konieczności długiego szkolenia (proste formularze, jasne komunikaty błędów).
+
+3. System powinien stosować spójne nazewnictwo zgodne z terminologią uczelni (np. „wypożyczenie”, „rezerwacja”, „magazyn”).
+
+2.2. Wydajność
+
+1. Średni czas odpowiedzi systemu dla typowych operacji (wyszukiwanie, tworzenie rezerwacji) nie powinien przekraczać 2–3 sekund przy obciążeniu typowym dla uczelni.
+
+2. System ma obsługiwać równoczesną pracę co najmniej 200 użytkowników.
+
+2.3. Niezawodność i dostępność
+
+1. System powinien być dostępny z poziomem SLA np. 99% w skali miesiąca (dokładna wartość do ustalenia).
+
+2. System musi posiadać mechanizmy backupu danych (codzienne kopie zapasowe, odtwarzanie awaryjne).
+
+3. Awaria systemu nie może powodować utraty zarejestrowanych rezerwacji po przywróceniu z kopii.
+
+2.4. Bezpieczeństwo
+
+1. System musi zapewniać szyfrowanie transmisji danych (HTTPS/TLS).
+
+2. System musi wymagać uwierzytelnienia przed dostępem do funkcji rezerwacji i danych użytkowników.
+
+3. Dostęp do funkcji administracyjnych musi być ograniczony do wybranych ról.
+
+4. System musi prowadzić logi operacji istotnych z punktu widzenia bezpieczeństwa:
+	- logowania,
+
+	- tworzenia/edycji/usuwania rezerwacji,
+
+	- modyfikacji sprzętu.
+
+
+5. System musi spełniać wymogi RODO / ochrony danych osobowych (minimalizacja danych, zgody, informacja o przetwarzaniu, prawo do wglądu i poprawy danych).
+
+2.5. Skalowalność
+
+1. Architektura systemu powinna umożliwiać łatwe zwiększanie zasobów (np. skalowanie serwera, bazy danych) w przypadku wzrostu liczby użytkowników.
+
+2. Dodanie nowej jednostki organizacyjnej (wydziału, instytutu) nie powinno wymagać dużych zmian w kodzie (konfiguracja, parametryzacja).
+
+2.6. Utrzymywalność i rozwijalność
+
+1. Kod systemu powinien być udokumentowany i zgodny z przyjętymi standardami programistycznymi.
+
+2. System powinien być zaprojektowany w sposób modułowy, umożliwiający dodawanie nowych funkcji
+
+3. Baza danych powinna być zaprojektowana tak, aby możliwe było rozszerzanie schematu bez przestojów lub z minimalnym przestojem.
+
+2.7. Zgodność i interoperacyjność
+
+1. System musi działać na najpopularniejszych przeglądarkach (Chrome, Firefox, Edge, Safari – wersje wspierane przez uczelnię).
+
+2. System powinien umożliwiać łatwy import/eksport danych w standardowych formatach (CSV, XLSX).
+
+2.8. Lokalizacja i język
+
+1. System musi obsługiwać co najmniej język polski.
+
+2. System powinien umożliwiać łatwe dodanie kolejnych wersji językowych (np. angielski) w przyszłości.
