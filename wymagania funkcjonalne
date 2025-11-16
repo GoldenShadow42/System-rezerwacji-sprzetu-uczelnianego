@@ -1,0 +1,153 @@
+1. Wymagania funkcjonalne
+
+1.1. Zarządzanie użytkownikami i rolami
+
+1. System musi umożliwiać logowanie użytkowników:
+	- studentów,
+
+	- pracowników dydaktycznych,
+
+	- pracowników administracyjnych,
+
+	- administratorów systemu.
+
+
+2. System musi obsługiwać role z różnymi uprawnieniami, np.:
+	- Użytkownik (student/pracownik) – przegląda i rezerwuje sprzęt,
+
+	- Opiekun zasobu/technik – zatwierdza rezerwacje, oznacza sprzęt jako niesprawny, zarządza dostępnością,
+
+	- Administrator – zarządza listą sprzętu, kontami, konfiguracją.
+
+
+3. System powinien umożliwiać podgląd i edycję podstawowych danych profilu użytkownika (e‑mail, telefon kontaktowy).
+
+1.2. Katalog i zarządzanie sprzętem
+
+1. System musi umożliwiać dodawanie, edycję i usuwanie pozycji sprzętu przez uprawnionych użytkowników.
+
+2. Dla każdej pozycji sprzętu system musi przechowywać:
+	- nazwę,
+
+	- kategorię (np. audio, wideo, IT, lab),
+
+	- lokalizację (budynek, pokój, magazyn),
+
+	- opis, zdjęcie (opcjonalnie),
+
+	- liczbę dostępnych egzemplarzy,
+
+	- informacje o opiekunie zasobu,
+
+	- status (sprawny, w naprawie, wycofany).
+
+
+3. System musi umożliwiać oznaczanie sprzętu jako czasowo niedostępny (np. serwis, inwentaryzacja).
+
+1.3. Wyszukiwanie i przeglądanie sprzętu
+
+1. System musi umożliwiać wyszukiwanie sprzętu po nazwie, kategorii, lokalizacji.
+
+2. System powinien umożliwiać filtrowanie sprzętu po:
+	- dostępności w określonym terminie,
+
+	- rodzaju (np. tylko sprzęt przenośny),
+
+	- uprawnieniach do wypożyczenia (np. tylko dla pracowników).
+
+
+3. System musi prezentować kalendarz dostępności danego sprzętu (widok dzienny/tygodniowy).
+
+1.4. Rezerwacje
+
+1. System musi umożliwiać tworzenie rezerwacji sprzętu:
+	- wybór sprzętu (lub grupy sprzętu),
+
+	- wybór terminu (data od–do, godziny),
+
+	- wskazanie celu (np. zajęcia, wydarzenie, projekt).
+
+
+2. System musi walidować rezerwację:
+	- brak konfliktu z istniejącymi rezerwacjami,
+
+	- dostępność wymaganej liczby egzemplarzy,
+
+	- spełnienie reguł (np. max czas, wcześniejsze zgłoszenie).
+
+
+3. System musi umożliwiać edycję i anulowanie rezerwacji przez użytkownika do określonego momentu (konfigurowalne).
+
+4. System powinien umożliwiać rezerwacje cykliczne (np. co tydzień przez semestr) – jeśli jest to wymagane.
+
+5. System powinien obsługiwać różne typy rezerwacji:
+	- rezerwacja do odbioru fizycznego (magazyn),
+
+
+1.5. Workflow zatwierdzania
+
+1. System musi umożliwiać skonfigurowanie, czy dany typ sprzętu wymaga zatwierdzenia przez opiekuna/administratora.
+
+2. System musi umożliwiać:
+	- zatwierdzenie rezerwacji,
+
+	- odrzucenie rezerwacji z podaniem powodu,
+
+	- automatyczne zatwierdzanie w prostych przypadkach (np. sprzęt niskiej wartości).
+
+
+3. System musi powiadamiać użytkowników o statusie rezerwacji:
+	- „oczekująca”,
+
+	- „zatwierdzona”,
+
+	- „odrzucona”,
+
+	- „zakończona”.
+
+
+1.6. Powiadomienia
+
+1. System musi wysyłać powiadomienia e‑mail o:
+	- utworzeniu rezerwacji,
+
+	- zmianie statusu,
+
+	- zbliżającym się terminie odbioru/zwrotu,
+
+	- przekroczeniu terminu zwrotu.
+
+
+2. System powinien umożliwiać konfigurację szablonów wiadomości i częstotliwości przypomnień.
+
+1.7. Obsługa wydania i zwrotu sprzętu
+
+1. System musi umożliwiać pracownikowi magazynu/technicznego:
+	- potwierdzenie wydania sprzętu (np. kliknięcie „Wydano”),
+
+	- potwierdzenie zwrotu sprzętu.
+
+
+2. System powinien umożliwiać odnotowanie:
+	- stanu sprzętu przy zwrocie,
+
+	- ewentualnych uszkodzeń,
+
+	- uwag (np. brak akcesoriów, opóźnienie).
+
+
+3. System powinien wspierać rejestrowanie ewentualnych kar/uwag na koncie użytkownika (np. blokada rezerwacji na X dni).
+
+1.8. Raportowanie i statystyki
+
+1. System musi umożliwiać generowanie raportów, np.:
+	- najczęściej rezerwowany sprzęt,
+
+	- obciążenie w wybranych okresach (sesja, początek semestru),
+
+	- historia rezerwacji konkretnego użytkownika,
+
+	- historia usterek danego sprzętu.
+
+
+2. System powinien umożliwiać eksport danych do CSV/XLSX (np. na potrzeby sprawozdań).
